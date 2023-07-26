@@ -66,7 +66,19 @@ export function translate(number) {
             break;
 
         default:
-            return 'number needs to be implemented'
+        //if the input number is greater than or equal to the current value in the numbers array of "primaries", then subtract that value from the input and add that Roman numeral to the result string.
+            let result = '';
+            const numbers = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
+            const numerals = ['M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I'];
+
+            for (let i = 0; i < numbers.length; i++) {
+                while (number >= numbers[i]) {
+                    result += numerals[i];
+                    number -= numbers[i];
+                }
+            }
+
+            return result;
     }
 
 }

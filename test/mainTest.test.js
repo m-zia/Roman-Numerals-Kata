@@ -25,5 +25,23 @@ describe("translate", () => {
         expect(translate(1000)).toBe('M');
     });
 
+    test("check if function works for some non-primary numerals", () => {
+        expect(translate(2)).toBe('II');
+        expect(translate(3)).toBe('III');
+        expect(translate(6)).toBe('VI');
+        expect(translate(7)).toBe('VII');
+        expect(translate(8)).toBe('VIII');
+        expect(translate(11)).toBe('XI');
+        expect(translate(41)).toBe('XLI');
+        expect(translate(52)).toBe('LII');
+        expect(translate(93)).toBe('XCIII');
+        expect(translate(106)).toBe('CVI');
+        expect(translate(402)).toBe('CDII');
+        expect(translate(505)).toBe('DV');
+        expect(translate(912)).toBe('CMXII');
+        expect(translate(1008)).toBe('MVIII');
+
+    });
+
 
   });

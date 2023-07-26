@@ -9,11 +9,12 @@ describe("translate", () => {
         expect(translate([])).toBe("Error: Invalid input. Please enter a number.");
     });
 
-    test("returns the number", () => {
+    test("check if user entered one of the main / primary numerals", () => {
+        expect(translate(1)).toBe('I');
+        expect(translate(4)).toBe('IV');
         expect(translate(5)).toBe('V');
-
-
-
+        expect(translate(9)).toBe('IX');
+        expect(translate(10)).toBe('X');
     });
 
 

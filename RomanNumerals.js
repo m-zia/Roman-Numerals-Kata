@@ -12,11 +12,32 @@ export function translate(number) {
         return ("Error: Invalid input. Please enter a number.")
     }
 
-    //basic conversion
-    if(number == 5){
-        return 'V';
+    //check if user entered one of the main / primary numerals
+    switch (number) {
+        case 1:
+            return 'I'
+            break;
+        case 4:
+            return 'IV'
+            break;
+
+        case 5:
+            return 'V'
+            break;
+        case 9:
+            return 'IX'
+            break;
+
+        case 10:
+            return 'X'
+            break;
+
+        default:
+            return 'number needs to be implemented'
     }
-    
+
+
+
 
 
 }

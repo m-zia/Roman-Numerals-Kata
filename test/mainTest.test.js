@@ -15,6 +15,14 @@ describe("translate", () => {
         expect(translate(5)).toBe('V');
         expect(translate(9)).toBe('IX');
         expect(translate(10)).toBe('X');
+        expect(translate(40)).toBe('XL');
+        expect(translate(50)).toBe('L');
+        expect(translate(90)).toBe('XC');
+        expect(translate(100)).toBe('C');
+        expect(translate(400)).toBe('CD');
+        expect(translate(500)).toBe('D');
+        expect(translate(900)).toBe('CM');
+        expect(translate(1000)).toBe('M');
     });
 
 
